@@ -10,7 +10,7 @@
     "cypress:run": "cypress run",
     "percy:cypress": "percy exec -- cypress run",
     "start:server": "serve -l 3000 .",
-    "test": "start-server-and-test start:server 3000 start percy:cypress"
+    "test": "start-server-and-test start http://localhost:3000 percy:cypress"
   },
   "dependencies": {
     "next": "12.0.4",
