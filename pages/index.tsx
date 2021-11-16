@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-         playing around with cypress , next and percy
+         playing around with cypress and percy
         </p>
 
      </main>
