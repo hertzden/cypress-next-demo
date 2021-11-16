@@ -8,10 +8,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Install
         run: yarn
+      - name: Build Next.js 
+        run: yarn run build
       - name: Run tests
         uses: percy/exec-action@v0.3.1
         with:
-          command: "yarn run build"
           custom-command: "npm test"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
