@@ -11,6 +11,7 @@ jobs:
       - name: Run tests
         uses: percy/exec-action@v0.3.1
         with:
+          build: yarn run build
           custom-command: "npm test"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
