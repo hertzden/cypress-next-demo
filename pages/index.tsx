@@ -18,9 +18,10 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-         playing around with cypress and percy
+         playing around with cypress , next and percy
         </p>
 
+        <p> Built in ❤️ with Next.js</p>
      </main>
     </div>
   )
