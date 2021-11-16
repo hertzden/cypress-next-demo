@@ -9,8 +9,8 @@ jobs:
       - name: Install
         run: yarn
       - name: Percy Test
-        run: yarn run build
-        run: yarn start
-        run: npx percy exec -- cypress run
+      - run: yarn run build
+      - run: yarn start
+      - run: npx percy exec -- cypress run
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
