@@ -8,7 +8,7 @@
     "lint": "next lint",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "percy:cypress": "percy exec -- cypress:run",
+    "percy:cypress": "percy exec -- cypress run",
     "start:server": "serve -l 3000 .",
     "test": "start-server-and-test start:server 3000 percy:cypress"
   },
