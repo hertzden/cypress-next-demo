@@ -21,7 +21,7 @@ const Home: NextPage = () => {
          playing around with cypress , next and percy
         </p>
 
-        <p> Built in ❤️ with Next.js</p>
+        <p> Built in ❤️  with Next.js 😅 </p>
      </main>
     </div>
   )
