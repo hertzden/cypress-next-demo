@@ -9,6 +9,6 @@ jobs:
       - name: Install
         run: yarn
       - name: Percy Test
-        run: npx percy exec -- cypress run
+        run: npx percy exec -- cypress run --config baseUrl=https://silly-davinci.netlify.app
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
