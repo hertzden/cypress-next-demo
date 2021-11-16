@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Cypress + Percy
+          Cypress + Next.js + Percy
         </h1>
 
         <p className={styles.description}>
