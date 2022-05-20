@@ -16,7 +16,7 @@ jobs:
         run: yarn
       - name: Build Next.js 
         run: yarn run build
-      - name: Run tests
+      - name: percy-build
         uses: percy/exec-action@v0.3.1
         with:
           custom-command: "npm test"
@@ -24,4 +24,9 @@ jobs:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         id: plan
       - name: Adding markdown
-        run: echo `### Hello ${{steps.plan.outcome}}` >> $GITHUB_STEP_SUMMARY
+        run: echo "${{steps.plan.outcome}" >> $GITHUB_STEP_SUMMARY
+      - name: print-result
+        env:
+          OUTCOME: ${{ steps.percy-build.outcome }}
+        run: |
+          echo "$OUTCOME"
