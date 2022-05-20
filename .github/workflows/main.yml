@@ -24,7 +24,7 @@ jobs:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         id: plan
       - name: Adding markdown
-        run: echo "${{steps.plan.outcome}" >> $GITHUB_STEP_SUMMARY
+        run: echo "${{steps.plan.outcome}}" >> $GITHUB_STEP_SUMMARY
       - name: print-result
         env:
           OUTCOME: ${{ steps.percy-build.outcome }}
