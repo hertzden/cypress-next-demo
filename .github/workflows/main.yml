@@ -19,10 +19,11 @@ jobs:
             yarn run build
       - name: percy-build
         run: |-
-            npx percy exec -- npm test >> $GITHUB_STEP_SUMMARY
+            npx percy exec -- npm test
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
         id: plan
       - name: Adding markdown
-        run: echo "${{steps.plan.outcome}}" >> $GITHUB_STEP_SUMMARY
+        run: |- 
+          echo "Test status:${{steps.plan.outcome}}" >> $GITHUB_STEP_SUMMARY
