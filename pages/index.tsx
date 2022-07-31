@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <p className={styles.description}>
          playing around with cypress , next and percy
         </p>
-
+        <button type='button' className={styles.primary}>Click here</button>
         <p> Built in ❤️  with Next.js 😅 😇 </p>
      </main>
     </div>
